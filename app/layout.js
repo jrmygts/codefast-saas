@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+// import "@/app/global.css"; - with the @ meaning that we are looking at the main folder
+// because the layout.js and the global.css file are inside of the same folder we don't need to write the @
+// instead we can write the . like "./global.css" and it does the same thing.
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,7 +13,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="pastel">
+      {/* 🔧 JavaScript 🔧*/}
+      {/* <script src="index.js"></script> */}
+
+      {/* 💋 CSS 💋 */}
+      {/* <link rel="stylesheet" href="global.css"></link> */}
+
       <body className={inter.className}>{children}</body>
     </html>
   );

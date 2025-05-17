@@ -1,0 +1,18 @@
+import Link from "next/link";
+
+// Every react component receives a parameter that is called props of type Object.
+const ButtonLogin = ({ isLoggedIn, name }) => {
+  // const person = { name: "Bob", age: 21 };
+  // If I want to call part of this object i would have to use person.name or person.age.
+  // const { name, age } = person; Like this we are extracting the name and age so we can access this part of the object by using name and age.
+  // Basically extracting the properties out of the id to remove the need to use something like props.name. think cleaner code.
+
+  if (props.isLoggedIn) {
+    // Props are used to pass data back and forth between components.
+    // As a developer you want to avoid writing repetitive code as much as possible.
+    return <Link href="/dashboard">Welcome back {props.name}</Link>;
+  }
+  return <button>Login</button>;
+};
+
+export default ButtonLogin;
